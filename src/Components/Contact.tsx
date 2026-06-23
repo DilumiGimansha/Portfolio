@@ -25,6 +25,11 @@ const INFO = {
   mail: "mailto:dilmansha2001@gmail.com",
   facebook: "https://www.facebook.com/dilumi.gimansha",
 };
+
+// Get a free access key at https://web3forms.com (just enter your email,
+// no signup needed) and paste it here. This is what routes form
+// submissions to your inbox.
+const WEB3FORMS_ACCESS_KEY = "d0f25227-1e77-4219-8341-00875feb936f";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const Contact = () => {
@@ -60,7 +65,27 @@ const Contact = () => {
 
     setIsSubmitting(true);
     try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New portfolio message from ${formData.name}`,
+          ...formData,
+        }),
+      });
+      const result = await res.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "Web3Forms submission failed");
+      }
+
+      // Keep a copy in Firestore too (optional — remove if not needed)
       await addDoc(collection(db, "portfolio"), formData);
+
       setFormData(emptyForm);
       setSubmitted(true);
       toast.success("Message sent! I'll get back to you soon.", { duration: 4000 });
@@ -270,10 +295,6 @@ const Contact = () => {
           >
             {submitted ? "Message Sent!" : isSubmitting ? "Sending…" : "Send Message"}
           </Button>
-
-          <p className="text-gray-600 text-xs text-center">
-            Typical response time: within 24 hours · No spam, ever.
-          </p>
         </div>
       </div>
     </div>
