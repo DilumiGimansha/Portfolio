@@ -10,6 +10,7 @@ import Mail from "./Mail";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Social from "./Social";
+import Education from "./Education";
 import { Toaster } from "react-hot-toast";
 
 const HomePage = () => {
@@ -24,9 +25,10 @@ const HomePage = () => {
     <Toaster/>
         <Header />
         <About />
+        <Experience />
+        <Education />
         <Projects />
         <Skills />
-        <Experience />
         <Certificates />
         <Contact />
         <Footer/>

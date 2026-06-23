@@ -173,6 +173,37 @@ const ExperienceInfo = [
       
 ];
 
+const EducationInfo = [
+    {
+        degree: "B.Sc. (Hons) in Information Technology Specialising in Information Technology",
+        institution: "Sri Lanka Institute of Information Technology (SLIIT)",
+        date: "June 2022 – June 2026",
+        year: "2026",
+        location: "Malabe, Sri Lanka",
+        desc: "Specialised in Software Engineering with a focus on full-stack development, software quality assurance, and AI-driven systems. Final year research project: Smart Courier Intelligence System — an AI-driven logistics platform integrating NLP, computer vision, and reinforcement learning.",
+        // grade: "Second Class Upper",
+        skills: ["Software Engineering", "QA & Testing", "Machine Learning", "Web Development", "Research"],
+    },
+     {
+        degree: "Diploma in English",
+        institution: "Sanit Campus",
+        date: "2018 – 2020",
+        year: "2026",
+        location: "Kandy, Sri Lanka",
+        desc: "Developed professional English proficiency with a focus on written and verbal communication, grammar, and comprehension — forming a strong foundation for clear technical documentation and cross-functional collaboration.",
+        skills: ["Communication", "Technical Writing", "Grammar & Composition", "Comprehension", "Presentation Skills"],
+    },
+    {
+        degree: "Higher Diploma in Information Technology",
+        institution: "SLIIT University",
+        date: "December 2024",
+        year: "2024",
+        location: "Malabe, Sri Lanka",
+        desc: "Advanced diploma covering software development methodologies, web technologies, and professional IT practices, complementing the undergraduate degree.",
+        skills: ["Software Development", "Web Development"],
+    },
+   
+];
 
 const Slugs = [
     "typescript",
@@ -212,5 +243,5 @@ const Slugs = [
     "sonarqube",
     "figma",
 ];
-export { Info, ProjectInfo,socialLinks, SkillInfo, ExperienceInfo, Slugs, CertificateInfo };
+export { Info, ProjectInfo,socialLinks, SkillInfo, ExperienceInfo, Slugs, CertificateInfo, EducationInfo };
 
