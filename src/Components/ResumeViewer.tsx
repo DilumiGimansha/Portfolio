@@ -5,7 +5,7 @@ import { IconArrowBigDownLineFilled, IconZoomIn, IconZoomOut } from "@tabler/ico
 import { GlobalWorkerOptions, version, getDocument  } from "pdfjs-dist";
 import { assetUrl } from "../assets";
 
-GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
+GlobalWorkerOptions.workerSrc =`https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${version}/pdf.worker.min.js`;
 
 const MIN_ZOOM = 0.6;
 const MAX_ZOOM = 2;
