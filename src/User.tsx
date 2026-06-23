@@ -3,7 +3,8 @@ import { assetUrl } from "./assets";
 const Info = {
     name: "Dilumi Gimansha",
     stack: ["Quality Assurance Engineer", "Manual QA Tester", "QA Automation Engineer", "Freelancer", "API Testing Specialist"],
-    bio: "I'm a detail-driven QA engineer specialized in building robust testing strategies and catching what others miss, ensuring every release meets the highest standards of quality and reliability. I love partnering with teams to ship dependable software, let's connect and build something solid together!"
+    bio: "I'm a detail-driven QA engineer specialized in building robust testing strategies and catching what others miss, ensuring every release meets the highest standards of quality and reliability. I love partnering with teams to ship dependable software, let's connect and build something solid together!",
+    fname: "Dilumi Gimansha Karunarathna"
 }
 
 

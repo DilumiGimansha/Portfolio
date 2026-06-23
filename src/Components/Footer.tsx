@@ -1,15 +1,58 @@
-import { Info, socialLinks} from "../User";
+import { Info } from "../User";
+import { Heart, ArrowUp } from "lucide-react";
+import { assetUrl } from "../assets";
 
-const Footer=()=>{
-    const socialIcons=socialLinks.map((socialLink, index)=>{
-        return <a   key={index} href={`${socialLink.link}`} target="_blank" rel="noreferrer" className="font-mono text-lg  hover:text-primaryColor hover:scale-105 transition transform duration-300 ease-in-out">
-        <socialLink.icon stroke={1.5}  size={25} />
-    </a>
-    })
-    return <div className="mt-20 mb-10 font-mono flex flex-col gap-2 items-center">
-        <div className="text-3xl md-mx:text-2xl text-primaryColor font-semibold">{Info.name}</div>
-        <div className="md-mx:flex hidden text-textColor gap-8 sm-mx:gap-6">{socialIcons}</div>
-        <div className="text-textColor text-xl md-mx:text-lg sm-mx:text-base xs-mx:text-sm xs-mx:flex flex-col items-center">Copyright &copy; {new Date().getFullYear()} {Info.name} <span className="xs-mx:hidden">|</span> <span>All Rights Reserved</span></div>
-    </div>
-}
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <footer className="font-mono border-t border-white/10 bg-bgColor">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-2">
+
+        {/* Left: Avatar + Name */}
+        <div className="flex items-center gap-3 min-w-fit">
+          <img
+            src={assetUrl("profile.jpeg")}
+            alt={Info.fname}
+            className="w-10 h-10 rounded-full object-cover border border-white/20"
+          />
+          {/* <span className="text-textColor text-sm italic whitespace-nowrap">
+            {Info.fname}
+          </span> */}
+        </div>
+
+        {/* Center: Copyright */}
+        <p className="text-textColor text-sm text-center flex flex-wrap items-center justify-center gap-1 opacity-80">
+          All rights reserved &copy; {new Date().getFullYear()}
+          <span className="opacity-40 mx-1">|</span>
+          Made with
+          <Heart
+            size={14}
+            className="text-primaryColor fill-primaryColor mx-0.5"
+          />
+          by {Info.fname}
+        </p>
+
+        {/* Right: Scroll to top */}
+        <button
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+          className="
+            w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0
+            bg-gradient-to-br from-cyan-400 to-teal-500
+            text-white shadow-md
+            hover:scale-105 hover:shadow-[0_0_16px_rgba(34,211,238,0.5)]
+            transition-all duration-300 ease-in-out
+          "
+        >
+          <ArrowUp size={18} strokeWidth={2.5} />
+        </button>
+
+      </div>
+    </footer>
+  );
+};
+
 export default Footer;
