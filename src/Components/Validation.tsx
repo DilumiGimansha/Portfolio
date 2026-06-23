@@ -6,7 +6,7 @@ const validateForm=(id:string, value:any)=>{
             return "";
         case 'email':
             if(value.length===0)return "Email is required";
-            if(!/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}/.test(value))return "Email is invalid";
+            if(!/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/.test(value))return "Email is invalid";
             return "";
         case 'phone':
             if(value.length===0)return "Phone Number is required";

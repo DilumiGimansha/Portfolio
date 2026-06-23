@@ -14,6 +14,8 @@ const FullProjectModal = (props: any) => {
             <Modal.Body className="!bg-bgColor xs-mx:!p-2 !pt-2 !border-primaryColor  !border-2 !border-t-0 !rounded-bl-3xl !rounded-br-3xl">
                 <Image
                     className="!rounded-xl !shadow-[0_0_5px_0_#64FFDA]"
+                    mah="60vh"
+                    fit="contain"
                     src={props.image}
                     alt={props.image}
                 />
@@ -24,11 +26,11 @@ const FullProjectModal = (props: any) => {
                     {props.desc}
                 </Text>
                 <Group justify="space-between" mt="md" mb={3} >
-                    <a href={props.github} target="_blank" className="!w-[48%] sm-mx:!w-[46%]"><Button variant="outline" size={btn} color="#64FFDA" fullWidth  radius="md">
+                    <a href={props.github} target="_blank" rel="noreferrer" className="!w-[48%] sm-mx:!w-[46%]"><Button variant="outline" size={btn} color="#64FFDA" fullWidth  radius="md">
                         View Code
                     </Button>
                     </a>
-                    <a href={props.link} target="_blank" className="!w-[48%] "><Button size={btn} color="#64FFDA" className="!text-bgColor" fullWidth radius="md">
+                    <a href={props.link} target="_blank" rel="noreferrer" className="!w-[48%] "><Button size={btn} color="#64FFDA" className="!text-bgColor" fullWidth radius="md">
                         View Live App
                     </Button></a>
                 </Group>
@@ -38,3 +40,4 @@ const FullProjectModal = (props: any) => {
 
 }
 export default FullProjectModal;
+
