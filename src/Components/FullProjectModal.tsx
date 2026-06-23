@@ -1,10 +1,31 @@
 import { Badge, Button, Group, Image, Indicator, Modal, ScrollArea, Text, useMatches } from "@mantine/core";
 
+const CustomScrollArea = (props: any) => (
+    <ScrollArea.Autosize
+        {...props}
+        styles={{
+            scrollbar: {
+                '&[data-orientation="vertical"]': { width: 8 },
+                '&[data-orientation="horizontal"]': { height: 8 },
+            },
+            thumb: {
+                backgroundColor: '#64FFDA',
+                border: '1px solid #64FFDA30',
+                borderRadius: 4,
+                '&:hover': {
+                    backgroundColor: '#64FFDA',
+                },
+            },
+            corner: { backgroundColor: '#64FFDA' },
+        }}
+    />
+);
+
 const FullProjectModal = (props: any) => {
     const download=useMatches({xs:"xs", md:"sm", lg:"md", bs:"lg"});
     const techno=useMatches({xs:"md", sm:"md", md:"lg", bs:"xl"});
     const btn =useMatches({xs:'xs',sm:'sm',md:'md',lg:'lg'});
-    return <Modal.Root scrollAreaComponent={ScrollArea.Autosize} size="auto" centered className=" font-mono" opened={props.opened} onClose={props.close}>
+    return <Modal.Root scrollAreaComponent={CustomScrollArea} size="auto" centered className=" font-mono" opened={props.opened} onClose={props.close}>
         <Modal.Overlay className="!backdrop-opacity-85 blur-sm" />
         <Modal.Content className="!rounded-3xl">
             <Modal.Header className="!bg-bgColor xs-mx:!p-2  !border-primaryColor  !border-2 !border-b-0 !rounded-tl-3xl !rounded-tr-3xl">
@@ -40,4 +61,3 @@ const FullProjectModal = (props: any) => {
 
 }
 export default FullProjectModal;
-
