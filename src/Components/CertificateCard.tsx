@@ -59,7 +59,7 @@ const CertificateCard = (props: CertificateCardProps) => {
                 {/* Skills Badges */}
                 <Group mb="lg" className="!gap-2">
                     {props.skills.map((skill: string, index: number) =>
-                        index < 8 && (
+                        index < 10 && (
                             <Badge key={index} size={badge} variant="light" color="#64FFDA">
                                 {skill}
                             </Badge>

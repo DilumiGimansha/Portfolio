@@ -128,7 +128,7 @@ const ExperienceInfo = [
         image: assetUrl("hnd.png"),          // path to your certificate image
         date: "Sep 27, 2025",
         skills: ["Software Development", "Web Development"],
-        link: "",
+        // link: "",
     },
     {
         title: "Diploma in English",
@@ -136,16 +136,41 @@ const ExperienceInfo = [
         image: assetUrl("english.png"),
         date: "February 2026",
         skills: ["English Proficiency", "Communication Skills"],
-        link: "",
+        // link: "",
     },
     {
         title: "AWS Cloud Web Application Builder Trainer",
         issuer: "Amazon Web Services Training and Certification",
         image: assetUrl("aws-trainer.png"),
         date: "September 27, 2025",                     // omit if no credential ID
-        skills: ["AWS Cloud", "Web Application Development", "Cloud Architecture", "Cloud Security, and Deployment", "Cloud Services"],
-        link: "https://www.credly.com/badges/41ec1cf6-43f3-4ff9-a0b0-1ec98a357275/print",
+        skills: ["Architecting Solutions On AWS", "AWS Cloud", "Web Applications", "Building Infrastructure On AWS", "AWS Cloud Practitioner"],
+        link: "https://www.credly.com/badges/41ec1cf6-43f3-4ff9-a0b0-1ec98a357275",
+     },
+      {
+        title: "SimuLearn: Highly Available Web Application",
+        issuer: "Amazon Web Services Training and Certification",
+        image: assetUrl("webapplication.png"),
+        date: "September 11, 2025",                     // omit if no credential ID
+        skills: ["Relational Databases", "Core Security Concepts", "Auto Healing & Scaling Applications", "Highly Available Web Applications"],
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7373291629404884993/",
+     },
+        {
+        title: "SimuLearn: Database in Practice",
+        issuer: "Amazon Web Services Training and Certification",
+        image: assetUrl("dbapp.png"),
+        date: "September 11, 2025",                     // omit if no credential ID
+        skills: ["Amazon RDS", "Scaling", "Backups", "Database Security", "Database Migration", "Database Monitoring", "Database Performance", "Database Troubleshooting"],
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7373282676499345408/",
+     },
+            {
+        title: "Automate Azure Load Testing by using GitHub",
+        issuer: "Microsoft Azure Certified: Azure Fundamentals",
+        image: assetUrl("Testing.png"),
+        date: "June 11, 2026",                     // omit if no credential ID
+        skills: ["Azure Load Testing", "GitHub Actions", "Automation", "Performance Testing", "JMeter scripts", "Load Testing", "Azure DevOps", "Continuous Integration"],
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7470798376767430656/",
     },
+      
 ];
 
 
