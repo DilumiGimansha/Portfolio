@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconMail, IconBrandLeetcode, IconBrandLinkedin, IconBrandYoutube, IconBrandFacebook } from "@tabler/icons-react";
+import { IconBrandGithub, IconMail, IconBrandLeetcode, IconBrandLinkedin, IconBrandFacebook } from "@tabler/icons-react";
 import { assetUrl } from "./assets";
 const Info = {
     name: "Dilumi Gimansha",
@@ -41,8 +41,8 @@ const ProjectInfo = [
         title: "Wiley QE Training Program  2024",
         desc: "Playwright automated test scripts for Wiley Online Library website.I am honored to have been selected for this opportunity. I confirmed my participation in the training session scheduled for December 10, 2024, and I gained valuable insights into Wiley’s Software Quality Engineering practices & exploring opportunities for professional growth. This opportunity to learn from industry experts and develop my skills means a lot to me. Thank you once again for organizing such a valuable program and considering me for this experience.",
         image: assetUrl("qe.png"),
-        live: false,
-        technologies: ["Software Quality Engineering practices", "Automation", "Playwright "],
+        live: true,
+        technologies: ["Software Quality Engineering practices", "Automation", "Playwright ", "Test Scripts", "Web Application Testing"],
         link: "https://github.com/DilumiGimansha/Wiley-Test-Automation.git",
         github: "https://github.com/DilumiGimansha/Wiley-Test-Automation.git"
     },
@@ -51,16 +51,16 @@ const ProjectInfo = [
         desc: "The Online Examination Management System is a full-stack web application designed to streamline the process of creating, managing, and conducting online examinations. Built with React for the frontend and Spring Boot for the backend, it offers a comprehensive solution for educational institutions. The system supports various question types, real-time monitoring during exams, and detailed reporting. It ensures a secure and efficient examination environment for both administrators and users.",
         image: assetUrl("OEMS.png"),
         live: false,
-        technologies: ["React", "Express.js", "MongoDB", "Tailwind", "Redux", "Node.js"],
+        technologies: ["React", "Express.js", "MongoDB", "Tailwind", "Redux", "Node.js" ],
         // link: "https://github.com/Code-Mars/Instagram-Clone",
         // github: "https://github.com/Code-Mars/Instagram-Clone"
     },
     {
-        title: "Smart Courier Intelligence System  | SLIIT  Final Year Research Project",
+        title: "Smart Courier Intelligence System | Research Project",
         desc: "Smart Courier Intelligence Platform is an AI-driven logistics solution designed to modernize courier operations in Sri Lanka by addressing key challenges in customer support, delivery efficiency, parcel security, and identity verification. The platform integrates four core components: an Automated Sinhala AI Voice Agent for real-time parcel tracking and pricing inquiries through natural speech, an AI-Driven Hybrid Routing System combining reinforcement learning with live GIS traffic data for dynamic delivery optimization, a Multimodal AI Face Engine fusing facial recognition with speaker verification for secure parcel handover, and a Voice Authentication System using ensemble-based detection to distinguish genuine from AI-generated voices with 96.2% accuracy. Together, these components demonstrate how integrated AI — spanning natural language processing, computer vision, biometrics, and operations research — can meaningfully transform the accessibility, security, and efficiency of courier services in Sri Lanka and similar developing economy logistics contexts.",
         image: assetUrl("postal.jpg"),
-        live: false,
-        technologies: ["Python", "Fast API", "Machine Learning", "Deep Learning", "OpenCV", "TensorFlow", "Keras", "PyTorch", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
+        live: true,
+        technologies: ["Python", "Fast API", "Machine Learning", "Deep Learning", "TensorFlow", "Reinforcement Learning"],
         link: "https://github.com/Lahiru2000/Smart_Postal.git",
         github: "https://github.com/Lahiru2000/Smart_Postal.git"
     }
@@ -181,7 +181,7 @@ const EducationInfo = [
         date: "June 2022 – June 2026",
         year: "2026",
         location: "Malabe, Sri Lanka",
-        desc: "Specialised in Software Engineering with a focus on full-stack development, software quality assurance, and AI-driven systems. Final year research project: Smart Courier Intelligence System — an AI-driven logistics platform integrating NLP, computer vision, and reinforcement learning.",
+        desc: "Specialised in Software Engineering with a focus on full-stack development, software quality assurance, and AI-driven systems. Final year research project: Smart Courier Intelligence System an AI-driven logistics platform integrating NLP, computer vision, and reinforcement learning.",
         // grade: "Second Class Upper",
         skills: ["Software Engineering", "QA & Testing", "Machine Learning", "Web Development", "Research"],
     },
@@ -191,7 +191,7 @@ const EducationInfo = [
         date: "2018 – 2020",
         year: "2026",
         location: "Kandy, Sri Lanka",
-        desc: "Developed professional English proficiency with a focus on written and verbal communication, grammar, and comprehension — forming a strong foundation for clear technical documentation and cross-functional collaboration.",
+        desc: "Developed professional English proficiency with a focus on written and verbal communication, grammar, and comprehension forming a strong foundation for clear technical documentation and cross-functional collaboration.",
         skills: ["Communication", "Technical Writing", "Grammar & Composition", "Comprehension", "Presentation Skills"],
     },
     {

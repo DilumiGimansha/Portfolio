@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Group, Image, Indicator, Text, useMatches } from "@mantine/core";
+import { Badge, Button, Card, Group, Image, Text, useMatches } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import FullProjectModal from "./FullProjectModal";
 const ProjectCard = (props: any) => {
@@ -18,11 +18,11 @@ const ProjectCard = (props: any) => {
         </Card.Section>
 
         <Group justify="space-between" mt="xs" mb="xs">
-            <div className="!text-2xl gap-2 !font-bold !text-white flex items-center sm-mx:!text-xl" >{props.title}{props.live === true && <Badge className="!px-1" variant="outline" color="red" rightSection={<Indicator className="!mr-0.5 !z-0" color="red" position="middle-end" size={7} processing></Indicator>} >Live</Badge>}</div>
+            <div className="!text-2xl gap-2 !font-bold !text-white flex items-center sm-mx:!text-xl" >{props.title}</div>
 
         </Group>
         <Group mb="sm" className="!gap-2">
-            {props.technologies.map((tech: string, index: number) => index < 3 && <Badge key={index} size={badge} variant="light" color="#64FFDA">{tech}</Badge>)}
+            {props.technologies.map((tech: string, index: number) => index < 10 && <Badge key={index} size={badge} variant="light" color="#64FFDA">{tech}</Badge>)}
         </Group>
         <Text className="!text-justify !text-sm xs-mx:!text-xs" lineClamp={5} size="sm" c="dimmed">
             {props.desc}
@@ -32,7 +32,7 @@ const ProjectCard = (props: any) => {
             Show More
         </Button>
     </Card>
-        <FullProjectModal opened={opened} close={close} title={props.title} desc={props.desc} image={props.image} live={props.live} link={props.link} github={props.github} technologies={props.technologies} />
+        <FullProjectModal opened={opened} close={close} title={props.title} desc={props.desc} image={props.image} live={props.live}  link={props.link} github={props.github} technologies={props.technologies} />
     </div>
 
 }
