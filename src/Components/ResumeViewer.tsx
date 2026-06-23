@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ActionIcon, Badge, Loader, Modal, ScrollArea, Tooltip, useMatches } from "@mantine/core";
 import { IconArrowBigDownLineFilled, IconZoomIn, IconZoomOut } from "@tabler/icons-react";
-import { getDocument, GlobalWorkerOptions } from "pdfjs-dist/legacy/build/pdf.mjs";
+// import { getDocument, GlobalWorkerOptions } from "pdfjs-dist/legacy/build/pdf.mjs";
+import { GlobalWorkerOptions, version, getDocument  } from "pdfjs-dist";
 import { assetUrl } from "../assets";
 
 GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
@@ -80,7 +81,10 @@ const ResumeViewer = (props: any) => {
                 setError(false);
                 setNumPages(0);
 
-                const pdf = await getDocument({ url: resumeUrl }).promise;
+                const pdf = await getDocument({
+  url: resumeUrl,
+  withCredentials: false
+}).promise;
                 if (cancelled) return;
 
                 pdfDocRef.current = pdf;
