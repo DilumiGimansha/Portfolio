@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconMail, IconBrandLeetcode, IconBrandLinkedin, IconBrandYoutube } from "@tabler/icons-react";
+import { IconBrandGithub, IconMail, IconBrandLeetcode, IconBrandLinkedin, IconBrandYoutube, IconBrandFacebook } from "@tabler/icons-react";
 import { assetUrl } from "./assets";
 const Info = {
     name: "Dilumi Gimansha",
@@ -90,8 +90,8 @@ const socialLinks = [
     { link: "https://github.com/DilumiGimansha", icon: IconBrandGithub },
     { link: "https://www.linkedin.com/in/dilumi-gimansha-karunarathna", icon: IconBrandLinkedin },
     { link: "mailto:dilmansha2001@gmail.com", icon: IconMail }, 
-    { link: "", icon: IconBrandYoutube },
-    { link: "", icon: IconBrandLeetcode }
+    { link: "https://www.facebook.com/dilumi.gimansha", icon: IconBrandFacebook },
+    { link: "https://leetcode.com/dilumigimansha/", icon: IconBrandLeetcode }
 ];
 
 
